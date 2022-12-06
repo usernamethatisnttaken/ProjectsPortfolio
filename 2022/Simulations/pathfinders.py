@@ -11,6 +11,13 @@
 #thing, move() has entirely too many returns and main() handles a lot of what should be
 #handled by lower functions
 
+
+##SETTINGS
+NOISE_PER = 25     #percent of the board that is wall
+SEEDED = False     #is the random generator seeded?
+TIMED = True     #are the algorithms timed
+COLLECT_DATA = False     #if it has a 'data.csv' file, it will write the length and time taken to search
+
 import pygame
 import random
 import time
@@ -26,12 +33,6 @@ dis_dims = 800
 pygame.init()
 dis = pygame.display.set_mode((dis_dims, dis_dims + 50))
 pygame.display.set_caption('Pathfinding Algorithms')
-
-##SETTINGS
-NOISE_PER = 25     #percent of the board that is wall
-SEEDED = False     #is the random generator seeded?
-TIMED = True     #are the algorithms timed
-COLLECT_DATA = False     #if it has a 'data.csv' file, it will write the length and time taken to search
 
 
 class Display:
