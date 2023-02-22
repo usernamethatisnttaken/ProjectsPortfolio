@@ -2,8 +2,9 @@ import pygame
 
 from plane import plane as plane
 
-debug = True
+debug = True #This class may need refactoring
 
+#The class that forms each individual polyhedron entity
 class polyhedron():
     def __init__(self, dis, type, coords, focal_length, rotation, scale):
         self.__coords = coords
@@ -17,7 +18,7 @@ class polyhedron():
         self.__generate_sides(type)
         self.adjust()
 
-    def __fit(self, n):
+    def __fit(self, n): #Helper funtion for adjusting between symbolic coords and real coords
         return n * self.__scale[0] + 400
 
     def __project_vertex(self, vertex, focal_length):
@@ -28,11 +29,7 @@ class polyhedron():
 
         return [new_x, new_y]
 
-    # def itr(self):
-    #     self.adjust()
-    #     self.draw()
-
-    def __generate_nodes(self, type):
+    def __generate_nodes(self, type): #Function that generates a node table based off of a starting coordinate (node = points that the polyhedron consists of)
         if type == "cubular":
             self.__d3_node_table = []
             for x in [self.__coords[0], self.__coords[0] + 1]:
@@ -40,24 +37,16 @@ class polyhedron():
                     for z in [self.__coords[2], self.__coords[2] + 1]:
                         self.__d3_node_table.append([x, y, z])
 
-    def __generate_edges(self, type):
+    def __generate_edges(self, type): #Funtion that generates an edge table (edges = lines bounding the polyhedron)
         if type == "cubular":
             self.__edge_table = [
-                [0, 1],
-                [0, 2],
-                [0, 4],
-                [1, 5],
-                [1, 3],
-                [2, 6],
-                [2, 3],
-                [3, 7],
-                [4, 5],
-                [4, 6],
-                [5, 7],
-                [6, 7]
+                [0, 1], [0, 2], [0, 4], 
+                [1, 5], [1, 3], [2, 6],
+                [2, 3], [3, 7], [4, 5],
+                [4, 6], [5, 7], [6, 7]
             ]
 
-    def __generate_sides(self, type):
+    def __generate_sides(self, type): #Funtion that generates a side table, and assigns colors to the sides (sides = planes bounding the polyhedron)
         colors  = ["gray" for i in range(6)]
         if debug:
             colors = ["red", "orange", "yellow", "green", "blue", "purple"]
@@ -71,7 +60,7 @@ class polyhedron():
                 plane([1, 3, 7, 5], self.__d3_node_table, colors[5])
             ]
 
-    def adjust(self):
+    def adjust(self): #Updates the points and draw priority to be in sync with the current rotation. Also calculates projection
         self.__d2_node_table = []
         temp_tbl = self.__rotation.calc(self.__d3_node_table)
         for node in temp_tbl:
