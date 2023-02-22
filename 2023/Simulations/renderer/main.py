@@ -5,6 +5,8 @@ from board import board as board_cls
 from place import place as place_cls
 from mouse import mouse as mouse_cls
 
+#Basic execution file for the module
+
 TPS = 30
 dis_dims = 800
 pygame.init()
@@ -26,9 +28,6 @@ def run():
     mouse = mouse_cls()
     board = board_cls(dis)
     place = place_cls(dis, dis_dims, board, mouse)
-    # board.add_polyhedron([0, 0, 0])
-    # board.add_polyhedron([-1, -1, -1])
-    # board.add_polyhedron([1, 1, 1])
 
     meta_cont = True
     cont = True
