@@ -1,6 +1,7 @@
 import pygame
 import math
 
+#The rotation controller for the scene
 class rotation():
     def __init__(self):
         self.__thetax = 0
@@ -8,13 +9,13 @@ class rotation():
         self.__thetaz = 0
         self.__speed  = 2
 
-    def __mod_up(self, n):
+    def __mod_up(self, n): #Modular addition helper
         return (n + math.radians(self.__speed)) % math.radians(360)
     
-    def __mod_down(self, n):
+    def __mod_down(self, n): #Modular subtratction helper
         return (n - math.radians(self.__speed) + math.radians(360)) % math.radians(360)
 
-    def move(self):
+    def move(self): #Controller/user inputs
         keys = pygame.key.get_pressed()
         if keys[pygame.K_UP]:
             self.__thetax = self.__mod_down(self.__thetax)
@@ -29,7 +30,7 @@ class rotation():
         elif keys[pygame.K_RIGHT]:
             self.__thetaz = self.__mod_up(self.__thetaz)
 
-    def calc(self, table):
+    def calc(self, table): #returns a new table of points that have been rotated by "rotation's" stored amount from a set of base points specified by table
         new_tbl = []
         x = self.__thetax
         y = self.__thetay
