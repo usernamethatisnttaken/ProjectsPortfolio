@@ -1,6 +1,6 @@
 import pygame
 
-class place:
+class place: #Class that executes the polyhedron placing !Currently only works on a cubed projection!
     MAX_COOL = 5
 
     def __init__(self, dis, dis_dims, board, mouse):
@@ -13,7 +13,7 @@ class place:
         self.__cooldown = 0
         self.__z = 0
 
-    def __rescale(self, n):
+    def __rescale(self, n): #Helper function to switch between real and symbolic coordinates
         return n // self.__scale
 
     def itr(self):
@@ -22,7 +22,7 @@ class place:
         if self.__cooldown:
             self.__cooldown -= 1
 
-    def __move(self):
+    def __move(self): #User input controller
         coords = [self.__rescale(self.__mouse.x) - self.__rescale(self.dis_dims) / 2, self.__rescale(self.__mouse.y) - self.__rescale(self.dis_dims) / 2, self.__z]
         if self.__mouse.rclick:
             if self.__board.get_polyhedron(coords) == None:

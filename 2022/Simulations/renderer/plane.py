@@ -1,4 +1,4 @@
-class plane:
+class plane: #A sub-class that stores all of the information relevant to a plane
     def __init__(self, coords, nodes, color):
         self.a = coords[0]
         self.b = coords[1]
