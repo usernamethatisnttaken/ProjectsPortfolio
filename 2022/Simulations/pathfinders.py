@@ -47,6 +47,7 @@ class Display:
         self.target = target
         self.frontier = [origin.coords]
         self.checked  = []
+        self.max_state = 0
         self.noise_gen()
 
     def noise_gen(self): #generates noise on the board
@@ -93,6 +94,8 @@ class Display:
             for i in range(len(base)):
                 for j in range(len(add)):
                     state_list.append(i + j)
+            if self.max_state < round(deviation):
+                self.max_state = round(deviation)
         return state_list
 
     def itr(self, found, state_list, first): #top function for all of the searches
