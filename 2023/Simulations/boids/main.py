@@ -1,3 +1,5 @@
+#Base visuals for the project
+
 import pygame
 
 from mech import dis_info

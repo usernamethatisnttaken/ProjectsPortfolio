@@ -1,3 +1,5 @@
+#Controlls the deltatheta for the boids
+
 import random
 import math
 
@@ -7,11 +9,13 @@ class t_angle:
         self.duration = 0
         self.__update()
 
+    #returns the minimum of two numbers
     def __min(self, x, y):
         if x <= y:
             return x
         return y
 
+    #Finds a new target angle
     def __update(self):
         scale = 1 / 40
         choice = [random.randint(-180, 180) for i in range(10)]
@@ -19,6 +23,7 @@ class t_angle:
         self.deltatheta = math.radians(random.choices(choice, prob)[0] * scale)
         self.duration = random.randint(20, 40)
 
+    #Gets the target angle and updates it if needed
     def get(self):
         if self.duration:
             self.duration -= 1
@@ -26,10 +31,6 @@ class t_angle:
             self.__update()
         return self.deltatheta
     
-    def set(self, target):
-        self.deltatheta = target
-        self.duration = random.randint(20, 40)
-
-    
+    #Gets the target angle, but does not update it
     def peek(self):
         return self.deltatheta

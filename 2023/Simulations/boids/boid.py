@@ -1,3 +1,7 @@
+#This code has a lot of bugs : )
+#The biggest one is a modular arithmetic problem at theta = 0. However, I am labeling that a feature and moving on
+#Main controller class for each boid
+
 import pygame
 import random
 import math
@@ -11,29 +15,28 @@ TWO_PI = math.radians(360)
 COLORS = [(255, 0, 0), (255, 63, 0), (255, 127, 0), (255, 190, 0), (255, 255, 0), (127, 225, 0), (0, 255, 0), (0, 127, 127), (0, 0, 255), (63, 0, 255), (127, 0, 255)]
 
 class boid():
-    def __init__(self, dis, dis_dims, coords, id, debug_carry):
+    def __init__(self, dis, dis_dims, coords, id):
         self.dis = dis
         self.dis_dims = dis_dims
         self.id = id
         self.__color = [random.randint(0, 255) for i in range(3)]
         self.__x, self.__y = coords
         self.__theta = math.radians(45)
-        self.__theta_log = math.radians(45)
         self.__target_angle = t_angle.t_angle(self.__theta)
 
         self.__evade_allow = True
 
-        self.__ctrl_cool = 0
-        self.__debug = debug_carry
-
+    #Safe division function
     def __div(self, n, m):
         if not m:
             return 0
         return n / m
 
+    #Calculates the sign of the input
     def __sign(self, n):
         return self.__div(n, abs(n))
     
+    #Calculates the relative angle between two points, given the direction of the root point
     def __rel_theta(self, a, b, phi):
         theta = math.acos(self.__div((b[0] - a[0]), math.sqrt((b[1] - a[1])**2 + (b[0] - a[0])**2)))
         if self.__sign(math.asin(self.__div((b[1] - a[1]), math.sqrt((b[1] - a[1])**2 + (b[0] - a[0])**2)))) < 0:
@@ -41,17 +44,21 @@ class boid():
         theta = (theta - phi + TWO_PI) % TWO_PI
         return (TWO_PI - theta) % TWO_PI
 
+    #Modular arithmetic
     def __mod(self, n, mod = TWO_PI):
         return (n + mod) % mod
     
+    #Returns the input, limited
     def __max(self, n, max):
         if abs(n) > max:
             return max * self.__sign(n)
         return n
 
+    #Returns the distance between two points
     def __dist(self, a, b):
         return math.sqrt((a[0] - b[0])**2 + (a[1] - b[1])**2)
 
+    #Shell iteration function
     def itr(self, check_chunks):
             self.__ctrl()
             self.__check(check_chunks)
@@ -59,19 +66,7 @@ class boid():
             self.__move()
             self.__draw()
 
-    def __ctrl(self):
-        keys = pygame.key.get_pressed()
-        if keys[pygame.K_d] and not self.__ctrl_cool:
-            if not self.__debug and not self.id:
-                self.__debug = True
-                self.__ctrl_cool = 8
-            elif self.__debug:
-                self.__debug = False
-                self.__ctrl_cool = 8
-
-        if self.__ctrl_cool:
-            self.__ctrl_cool -= 1
-
+    #Is fed a list of nearby boids and modifies the movement of this boid to compensate for them
     def __check(self, check_chunks):
         avg_turn = 0
         avg_pos = [0, 0]
@@ -85,8 +80,6 @@ class boid():
                     if dist < SIGHT:
                         theta = self.__rel_theta([self.__x, self.__y], other_pos, self.__theta)
                         if (theta - 2 * self.__theta + math.radians(450)) % TWO_PI >= math.radians(360 - SIGHT_THETA / 2) or (theta - 2 * self.__theta + math.radians(450)) % TWO_PI <= math.radians(SIGHT_THETA / 2):
-                            # if self.__debug:
-                            #     pygame.draw.line(self.dis, "red", [self.__x, self.__y] ,[boid.get_pos()[0], boid.get_pos()[1]], 3)
                             self.__evade(dist, theta)
                             self.__evade_allow = False
                             avg_turn += boid.get_theta()
@@ -99,61 +92,29 @@ class boid():
         self.__evade_allow = True
         self.__color = COLORS[len(COLORS) - 1 - (area_boid_count // 4 if area_boid_count < len(COLORS) * 4 else len(COLORS) - 1)]
 
-    def __evade(self, dist, theta): #Also jank, but it kind of works and that is good enough for me for now
+    #!This code has bugs!  Each boid tries not to crash into other boids
+    def __evade(self, dist, theta):
         rate = 1/7.5 #1 / 2
         theta -= self.__theta - math.radians(90)
         if self.__evade_allow:
             self.__theta -= self.__target_angle.deltatheta
             self.__theta -= (self.__target_angle.deltatheta * self.__sign(theta) * rate) % TWO_PI
-        # if self.__debug:
-        #     print(math.degrees(theta), math.degrees(self.__theta))
-        #     pygame.draw.line(self.dis, "orange", [self.__x, self.__y], [SIGHT * math.sin(self.__theta) + self.__x, SIGHT * math.cos(self.__theta) + self.__x])
-        #     pygame.draw.line(self.dis, "purple", [self.__x, self.__y], [SIGHT * math.sin(self.__theta - self.__target_angle.deltatheta * self.__sign(theta) * rate) + self.__x, SIGHT * math.cos(self.__theta - self.__target_angle.deltatheta * self.__sign(theta) * rate) + self.__x])
 
-    def __match(self, avg_turn): #THIS IS ABSOLUTE JANK AND JUST BARELY WORKS
+    #!This code has bugs!  Each boid wants to match the angle of its friends
+    def __match(self, avg_turn):
         self.__theta += self.__max(self.__div((self.__mod(avg_turn) - self.__mod(self.__theta)), 9), (SIGHT_THETA / 4) / 32)
 
+    #Each boid wants to be in the center of its group
     def __jostle(self, avg_pos):
-        # if self.__debug:
-        #     pygame.draw.line(self.dis, "blue", [self.__x, self.__y], avg_pos, 3)
         self.__theta += self.__div(self.__rel_theta([self.__x, self.__y], avg_pos, self.__theta), 50)
 
+    #Base movement controller for the boids
     def __move(self):
         self.__theta += self.__target_angle.get()
-        new_x = SIGHT * math.sin(self.__theta) + self.__x
-        new_y = SIGHT * math.cos(self.__theta) + self.__y
-        if self.__debug:
-            pygame.draw.line(self.dis, "yellow", [self.__x, self.__y], [new_x, new_y])
-        self.__x, self.__y = self.__bound(new_x, new_y)
-        
+        self.__x = self.__mod(SPEED * math.sin(self.__theta) + self.__x, self.dis_dims.x)
+        self.__y = self.__mod(SPEED * math.cos(self.__theta) + self.__y, self.dis_dims.y)
 
-    def __bound(self, x, y):
-        # rate = math.radians(15)
-        # self.__theta = self.__mod(self.__theta)
-        # x_down = (x < 0 and self.__theta < 270) or (x > self.dis_dims.x and self.__theta < 90)
-        # y_down = (y < 0 and self.__theta < 180) or (y > self.dis_dims.y and self.__theta < 360)
-        # x_up = (x < 0 and self.__theta > 270) or (x > self.dis_dims.x and self.__theta > 90)
-        # y_up = (y < 0 and self.__theta > 180) or (y > self.dis_dims.y and self.__theta > 0)
-        # if x_down or y_down:
-        #     if self.__debug:
-        #         print(True)
-        #     self.__theta -= rate
-        #     self.__target_angle.set(-rate)
-        # if x_up or y_up:
-        #     if self.__debug:
-        #         print(True)
-        #     self.__theta += rate
-        #     self.__target_angle.set(rate)
-
-        # max_theta = 10
-        # if abs(self.__theta - self.__theta_log) > math.radians(max_theta):
-        #     self.__theta = self.__theta_log + (math.radians(max_theta) * -self.__sign(self.__theta - self.__theta_log))
-        # self.__theta_log = self.__theta
-
-        new_x = self.__mod(SPEED * math.sin(self.__theta) + self.__x, self.dis_dims.x)
-        new_y = self.__mod(SPEED * math.cos(self.__theta) + self.__y, self.dis_dims.y)
-        return new_x, new_y
-
+    #Draws the boid
     def __draw(self):
         scale = 25
         outline = 50
@@ -162,22 +123,9 @@ class boid():
         p3 = [math.sin(self.__theta + math.radians(135)) / 3 * scale + self.__x, math.cos(self.__theta + math.radians(135)) / 3 * scale + self.__y]
         pygame.draw.polygon(self.dis, self.__color, [p1, p2, p3])
         pygame.draw.polygon(self.dis, [i - (outline if i - outline > 0 else i) for i in self.__color], [p1, p2, p3], 1)
-        # pygame.draw.polygon(self.dis, "black", [p1, p2, p3], 1)
-
-        if self.__debug:
-            pygame.draw.line(self.dis, "green", [self.__x, self.__y], [SIGHT * math.sin(math.radians(SIGHT_THETA / 2) + self.__theta) + self.__x, SIGHT * math.cos(math.radians(SIGHT_THETA / 2) + self.__theta) + self.__y], 1)
-            pygame.draw.line(self.dis, "green", [self.__x, self.__y], [SIGHT * math.sin(math.radians(-SIGHT_THETA / 2) + self.__theta) + self.__x, SIGHT * math.cos(math.radians(-SIGHT_THETA / 2) + self.__theta) + self.__y], 1)
-
-            sight_rect = pygame.rect.Rect(self.__x - SIGHT, self.__y - SIGHT, 2 * SIGHT, 2 * SIGHT)
-            pygame.draw.arc(self.dis, "green", sight_rect, math.radians(-SIGHT_THETA / 2) + self.__theta - math.radians(90), math.radians(SIGHT_THETA / 2) + self.__theta - math.radians(90))
-            pygame.draw.arc(self.dis, "red", sight_rect, math.radians(SIGHT_THETA / 2) + self.__theta - math.radians(90), math.radians(-SIGHT_THETA / 2) + self.__theta - math.radians(90))
-
 
     def get_pos(self):
         return [self.__x, self.__y]
     
     def get_theta(self):
         return self.__theta
-    
-    def __repr__(self):
-        return "[" + str(self.__x) + ", " + str(self.__y) + "]"

@@ -1,3 +1,5 @@
+#Model function, contains all of the boids and does all(most) high-level things
+
 import pygame
 import random
 import math
@@ -31,6 +33,7 @@ class model:
 
         self.ctrl_cool = 0
 
+    #Adds a boid to the board
     def __add_boid(self, coords = None):
         if coords == None:
             radius = 50
@@ -44,6 +47,7 @@ class model:
                     self.__debug_boid = boid_push
         self.__boid_count += 1
 
+    #Iteration shell function
     def itr(self):
         self.__ctrl()
 
@@ -74,6 +78,7 @@ class model:
 
         self.__draw()
 
+    #User controller
     def __ctrl(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_n]:
@@ -107,6 +112,7 @@ class model:
         if DEBUG:
             self.__debug_boid.x, self.__debug_boid.y = pygame.mouse.get_pos()
 
+    #Draws the board
     def __draw(self):
         if SHOW_TILES and self.__debug:
             for x in self.__board:
