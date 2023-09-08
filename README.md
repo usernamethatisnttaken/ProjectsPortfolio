@@ -31,3 +31,6 @@ Status: Functional with one major bug (atan calculation is off)
 A slightly better 3D renderer with a placement GUI (v2)
 
 Status: Functional with a few bugs (movement normalization, occlusion clipping)
+
+## 2023 Summer
+I'm currently in the process of porting/doing cleanup on projects from here onward
