@@ -13,7 +13,7 @@ Status: Seems to be broken
 #### Collision Simulation
 Simulates a bunch of colliding spheres
 
-Status: Buggy but functional
+Status: Buggy but functional (has problems with offsetting at certain gravity values, no GUI, ...)
 
 #### Pathfinders
 Simulates one of three different pathfinding algorithms
@@ -23,7 +23,7 @@ Status: Non-optimized but functional
 ## 2023 Spring
 ### Simulations
 #### Boids
-My implementation of "boids" (https://en.wikipedia.org/wiki/Boids)
+My implementation of boids (https://en.wikipedia.org/wiki/Boids)
 
 Status: Functional with one major bug (atan calculation is off)
 
