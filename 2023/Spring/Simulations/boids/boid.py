@@ -15,7 +15,7 @@ TWO_PI = math.radians(360)
 COLORS = [(255, 0, 0), (255, 63, 0), (255, 127, 0), (255, 190, 0), (255, 255, 0), (127, 225, 0), (0, 255, 0), (0, 127, 127), (0, 0, 255), (63, 0, 255), (127, 0, 255)]
 
 class boid():
-    def __init__(self, dis, dis_dims, coords, id):
+    def __init__(self, dis, dis_dims, coords, id, debug):
         self.dis = dis
         self.dis_dims = dis_dims
         self.id = id
@@ -60,7 +60,6 @@ class boid():
 
     #Shell iteration function
     def itr(self, check_chunks):
-            self.__ctrl()
             self.__check(check_chunks)
             self.__theta = self.__mod(self.__theta)
             self.__move()
