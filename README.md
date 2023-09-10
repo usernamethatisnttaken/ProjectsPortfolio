@@ -3,6 +3,8 @@ Just a collection of all of my finished projects (now with extra polishing)
 
 Status of the project enumerates whether it works or not along with my reflection (as of Fall 2023)
 
+To be safe: I'd appreciate it if you wouldn't rip from my work when this goes public, as I worked really hard on these, thanks!
+
 
 ## 2022 Fall
 ### Simulations
@@ -27,7 +29,7 @@ Status: Non-optimized but functional
 #### Boids
 My implementation of boids (https://en.wikipedia.org/wiki/Boids)
 
-Status: Functional with one major bug (atan calculation is off)
+Status: Functional with one major bug (atan calculation is off -> why they sort of peel from the flock when facing at certain angles)
 
 #### Renderer
 A slightly better 3D renderer with a placement GUI (v2)
