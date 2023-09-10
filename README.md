@@ -3,6 +3,7 @@ Just a collection of all of my finished projects (now with extra polishing)
 
 Status of the project enumerates whether it works or not along with my reflection (as of Fall 2023)
 
+
 ## 2022 Fall
 ### Simulations
 #### Cube Simulation
@@ -20,6 +21,7 @@ Simulates one of three different pathfinding algorithms
 
 Status: Non-optimized but functional
 
+
 ## 2023 Spring
 ### Simulations
 #### Boids
@@ -32,5 +34,15 @@ A slightly better 3D renderer with a placement GUI (v2)
 
 Status: Functional with a few bugs (movement normalization, occlusion clipping)
 
+
 ## 2023 Summer
 I'm currently in the process of porting/doing cleanup on projects from here onward
+### Data Analysis
+#### Experimental Data Compression
+A data transformer I made as an experiment that takes a large amount of input data and encodes/decodes it into/from a PNG file
+
+Status: One single bug (*ahem* feature): Image size hardcapping seems to be broken, so it is softcapped by processing time instead. Please do not try to do 1E7+ entries, as that image's size is >10MB, and I don't want your computer to hate you.
+
+
+## 2023 Fall
+IP
