@@ -14,5 +14,5 @@ Hello World!
 
 <script>
     var time = new Date();
-    document.getElementById("demo").innerHTML = time.getSeconds();
+    document.getElementById("time").innerHTML = time.getSeconds();
 </script>
