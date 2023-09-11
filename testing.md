@@ -17,7 +17,7 @@ Hello World!
     var clock = new Date();
 
     function countTime() {
-        document.getElementById("time").innerHTML = time.getSeconds() + timeS;
+        document.getElementById("time").innerHTML = clock.getSeconds() + timeS;
         console.log(time.getSeconds);
     }
 
