@@ -1,5 +1,5 @@
 # Projects_Portfolio
-Just a collection of all of my finished projects (now with extra polishing)
+Just a collection of all of my finished projects (now with extra polishing!)
 
 Status of the project enumerates whether it works or not along with my reflection (as of Fall 2023)
 
