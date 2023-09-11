@@ -1,6 +1,6 @@
 ---
-permalink: /testing/
+permalink: /testing
 ---
 Hello World!
 
-https://usernamethatisnttaken.github.io/ProjectsPortfolio/testing/
+[About me](https://usernamethatisnttaken.github.io/ProjectsPortfolio/about)

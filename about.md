@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /about
 ---
 **THIS IS VERY MUCH IN THE WORKS RN**
 
