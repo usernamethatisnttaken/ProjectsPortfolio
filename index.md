@@ -18,15 +18,16 @@ To be safe: I'd appreciate it if you wouldn't rip from my work when this goes pu
 ## 2023 Spring
 ### Simulations
 #### Boids:
-<p id = boidText></p>
-<script>
+<p src = "README.md"></p>
+<!-- <p id = boidText></p> -->
+<!-- <script>
     const fs = require("fs");
     fs.readFile('README.txt', 'utf8', function(err, data){
         console.log(data);
     });
     var boidText = "My implementation of boids (https://en.wikipedia.org/wiki/Boids)\nStatus: Functional with one major bug (atan calculation is off -> why they sort of peel from the flock when facing at certain angles)\n"
     document.getElementById("boidText").innerHTML = boidText;
-</script>
+</script> -->
 
 
 #### Renderer:
