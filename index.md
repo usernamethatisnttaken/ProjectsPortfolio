@@ -4,7 +4,7 @@ To be safe: I'd appreciate it if you wouldn't rip from my work when this goes pu
 
 
 ## 2022 Fall
-### Simulations
+### <details><summary>Simulations</summary>
 #### Cube Simulation:
 A basic 3D renderer (v1)  
 Status: Seems to be broken
@@ -16,6 +16,7 @@ Status: Buggy but functional (has problems with offsetting at certain gravity va
 #### Pathfinders:
 Simulates one of three different pathfinding algorithms  
 Status: Non-optimized but functional
+</details>
 
 
 ## 2023 Spring
@@ -34,8 +35,7 @@ I'm currently in the process of porting/doing cleanup on projects from here onwa
 ### Data Analysis
 #### Experimental Data Compression:
 A data transformer I made as an experiment that takes a large amount of input data and encodes/decodes it into/from a PNG file  
-Status: One single bug (*ahem* feature): Image size hardcapping seems to be broken, so it is softcapped by processing time instead  
-Please do not try to do 1E7+ entries, as that image's size is >10MB, and I don't want your computer to hate you
+Status: One single bug (*ahem* feature): Image size hardcapping seems to be broken, so it is softcapped by processing time instead. Please do not try to do 1E7+ entries, as that image's size is >10MB, and I don't want your computer to hate you
 
 
 ## 2023 Fall
