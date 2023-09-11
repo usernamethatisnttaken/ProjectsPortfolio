@@ -6,13 +6,15 @@ Hello World!
 [x] Learn basic markdown  
 [ ] Learn more markdown
 
-[About me][About me link]
+[About][About link]
 
-[About me link]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
+[About link]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
 
 <p id="time"></p>
 
 <script>
-    var time = new Date();
-    document.getElementById("time").innerHTML = time.getSeconds();
+    while(true) {
+        var time = new Date();
+        document.getElementById("time").innerHTML = time.getSeconds();
+    }
 </script>
