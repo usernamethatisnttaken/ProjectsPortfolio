@@ -15,6 +15,8 @@ To be safe: I'd appreciate it if you wouldn't rip from my work when this goes pu
 [2023 summer]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/summer
 [2023 fall]:  https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/fall
 
+![Cat flexing its paws](CatPaws.gif)
+
 ## 2023 Spring
 ### Simulations
 #### Boids:
