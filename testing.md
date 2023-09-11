@@ -18,7 +18,6 @@ Hello World!
 
     function countTime() {
         document.getElementById("time").innerHTML = clock.getSeconds() + timeS;
-        console.log(time.getSeconds);
     }
 
     setInterval(countTime, 1000);
