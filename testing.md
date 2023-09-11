@@ -16,7 +16,7 @@ Hello World!
     var timeS = 0;
     // while(true) {
         var time = new Date();
-        document.getElementById("time").html(ime.getSeconds() + timeS);
+        document.getElementById("time").html(time.getSeconds() + timeS);
     // }
     console.log("successfully executed")
 </script>
