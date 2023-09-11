@@ -10,6 +10,11 @@ To be safe: I'd appreciate it if you wouldn't rip from my work when this goes pu
     * [Summer][2023 summer]
     * [Fall][2023 fall]
 
+[2022 fall]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/2022/fall
+[2023 spring]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/spring
+[2023 summer]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/summer
+[2023 fall]:  https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/fall
+
 ## 2023 Spring
 ### Simulations
 #### Boids:
