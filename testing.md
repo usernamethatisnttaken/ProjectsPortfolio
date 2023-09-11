@@ -10,7 +10,7 @@ Hello World!
 
 [About link]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
 
-<p id="time"></p>
+<p id="time">0</p>
 
 <script>
     var timeS = 0;
@@ -21,6 +21,5 @@ Hello World!
     function countTime() {
         document.getElementById("time").innerHTML = clock.getSeconds() + timeS;
     }
-    countTime();
 </script>
 <button type="button" onclick="timeS = (timeS + 30) % 60">Time travel.</button>
