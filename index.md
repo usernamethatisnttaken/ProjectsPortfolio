@@ -1,4 +1,3 @@
-# Projects_Portfolio
 Just a collection of all of my finished projects (now with extra polishing!)
 
 Status of the project enumerates whether it works or not along with my reflection (as of Fall 2023)
@@ -51,3 +50,12 @@ Please do not try to do 1E7+ entries, as that image's size is >10MB, and I don't
 Empty for now
 
 Currently working on adding a pages deployment as well.
+
+
+## Other Pages
+_In progress, of course_
+[About me][aboutMeLink]
+Link to [my testing page][testingLink] (for me)
+
+[aboutMeLink]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
+[testingLink]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/testing

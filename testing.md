@@ -3,6 +3,6 @@ permalink: /testing/
 ---
 Hello World!
 
-[About me][aboutMeLink]
+[About me][About me link]
 
-[aboutMeLink]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
+[About me link]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
