@@ -2,25 +2,13 @@ Just a collection of all of my finished projects (now with extra polishing!)
 Status of the project enumerates whether it works or not along with my reflection (as of Fall 2023)  
 To be safe: I'd appreciate it if you wouldn't rip from my work when this goes public (super arrogant, I know), as I worked really hard on these and that's kinda rude. Thanks!
 
+* 2022  
+    * [Fall][2022 fall]
 
-## 2022 Fall
-<details>
-
-<summary> Simulations </summary>
-
-#### Cube Simulation:
-A basic 3D renderer (v1)  
-Status: Seems to be broken
-
-#### Collision Simulation:
-Simulates a bunch of colliding spheres  
-Status: Buggy but functional (has problems with offsetting at certain gravity values, no GUI, ...)
-
-#### Pathfinders:
-Simulates one of three different pathfinding algorithms  
-Status: Non-optimized but functional
-</details>
-
+* 2023  
+    * [Spring][2023 spring]
+    * [Summer][2023 summer]
+    * [Fall][2023 fall]
 
 ## 2023 Spring
 ### Simulations
