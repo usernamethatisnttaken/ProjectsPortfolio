@@ -1,8 +1,4 @@
-author: 
-  name: Hudsen Mickley
-minima:
-  social_links:
-    - { platform: github,  user_url: "https://github.com/usenamethatisnttaken" }
+author: usernamethatisnttaken
 theme: minima
 title: Projects Portfolio
 description: A collection of all of my moderately big+ projects
