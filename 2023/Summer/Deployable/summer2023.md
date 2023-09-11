@@ -1,6 +1,7 @@
 ---
 permalink: /2023/summer/
 ---
+# Summer 2023
 ## Data Analysis
 ### Experimental Data Compression:
 A data transformer I made as an experiment that takes a large amount of input data and encodes/decodes it into/from a PNG file  
