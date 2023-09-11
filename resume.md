@@ -1,4 +1,4 @@
 ---
-permalink: /about
+permalink: /resume
 ---
 **_IP_**
