@@ -3,7 +3,7 @@ permalink: /testing/
 ---
 Hello World!
 
-[x] Learn basic markdown
+[x] Learn basic markdown  
 [ ] Learn more markdown
 
 [About me][About me link]

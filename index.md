@@ -4,7 +4,9 @@ To be safe: I'd appreciate it if you wouldn't rip from my work when this goes pu
 
 
 ## 2022 Fall
-### <details><summary>Simulations</summary>
+<details>
+
+### Simulations
 #### Cube Simulation:
 A basic 3D renderer (v1)  
 Status: Seems to be broken
