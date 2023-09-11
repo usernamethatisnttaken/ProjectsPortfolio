@@ -1,3 +1,3 @@
 layout: page
 title: About
-permalink: https://https://usernamethatisnttaken.github.io/ProjectsPortfolio/about/
+permalink: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about/
