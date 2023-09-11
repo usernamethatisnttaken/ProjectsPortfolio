@@ -16,7 +16,7 @@ Hello World!
     var timeS = 0;
     // while(true) {
         var time = new Date();
-        document.getElementById("time").htmlt(ime.getSeconds() + timeS);
+        document.getElementById("time").html(ime.getSeconds() + timeS);
     // }
 </script>
 <button type="button" onclick="timeS = (timeS + 30) % 60">Time travel.</button>
