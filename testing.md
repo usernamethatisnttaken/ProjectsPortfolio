@@ -1,5 +1,5 @@
 ---
-permalink: /testing
+permalink: /testing/
 ---
 Hello World!
 
