@@ -10,7 +10,7 @@ Hello World!
 
 [About link]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
 
-<p id="time"></p>
+<div id="time"></div>
 
 <script>
     var timeS = 0;
@@ -18,5 +18,6 @@ Hello World!
         var time = new Date();
         document.getElementById("time").html(ime.getSeconds() + timeS);
     // }
+    console.log("successfully executed")
 </script>
 <button type="button" onclick="timeS = (timeS + 30) % 60">Time travel.</button>
