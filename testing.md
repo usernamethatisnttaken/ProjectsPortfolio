@@ -9,3 +9,10 @@ Hello World!
 [About me][About me link]
 
 [About me link]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
+
+<p id="time"></p>
+
+<script>
+    var time = new Date();
+    document.getElementById("demo").innerHTML = time.getHours();
+</script>
