@@ -8,7 +8,7 @@
 
 ##CONFIG
 night_mode = False        #inverts colors, for better night viewing
-acceleration = 0.1        #acceleration toward the center point
+acceleration = 0.3        #acceleration toward the center point
 air_resistance = 0.05     #what percentage of velocity is lost to air resistance every check
 sphere_amount = 100
 
