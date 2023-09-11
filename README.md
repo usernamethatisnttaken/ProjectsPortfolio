@@ -49,3 +49,5 @@ Please do not try to do 1E7+ entries, as that image's size is >10MB, and I don't
 
 ## 2023 Fall
 Empty for now
+
+Currently working on adding a pages deployment as well.

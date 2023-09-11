@@ -486,11 +486,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\hudjo\\PythonRepos\\Projects_Portfolio\\2023\\Summer\\experimental_data_compression\\experimental_data_compression.csproj",
+      "projectUniqueName": "c:\\Users\\hudjo\\OneDrive\\Documents\\GitHub\\ProjectsPortfolio\\2023\\Summer\\experimental_data_compression\\experimental_data_compression.csproj",
       "projectName": "experimental_data_compression",
-      "projectPath": "c:\\Users\\hudjo\\PythonRepos\\Projects_Portfolio\\2023\\Summer\\experimental_data_compression\\experimental_data_compression.csproj",
+      "projectPath": "c:\\Users\\hudjo\\OneDrive\\Documents\\GitHub\\ProjectsPortfolio\\2023\\Summer\\experimental_data_compression\\experimental_data_compression.csproj",
       "packagesPath": "C:\\Users\\hudjo\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\hudjo\\PythonRepos\\Projects_Portfolio\\2023\\Summer\\experimental_data_compression\\obj\\",
+      "outputPath": "c:\\Users\\hudjo\\OneDrive\\Documents\\GitHub\\ProjectsPortfolio\\2023\\Summer\\experimental_data_compression\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hudjo\\AppData\\Roaming\\NuGet\\NuGet.Config",
