@@ -53,9 +53,9 @@ Currently working on adding a pages deployment as well.
 
 
 ## Other Pages
-_In progress, of course_
-[About me][aboutMeLink]
-Link to [my testing page][testingLink] (for me)
+_In progress, of course_  
+[About me][about me]  
+Link to [my testing page][testing] (for me)
 
-[aboutMeLink]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
-[testingLink]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/testing
+[about me]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
+[testing]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/testing
