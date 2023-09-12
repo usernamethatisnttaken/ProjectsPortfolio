@@ -13,4 +13,4 @@ Status: One single bug (*ahem* feature): Image size hardcapping seems to be brok
 </details>
 ![](dataCompression.gif)
 
-<h2></h2>
+<h2>&emsp;</h2>
