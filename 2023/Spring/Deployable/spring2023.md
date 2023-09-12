@@ -35,3 +35,4 @@ Status: Functional with a few bugs (movement normalization, occlusion clipping)
     * A/D - Rotate perspective around the orgin?  
 
 </details>
+![](renderer.gif)
