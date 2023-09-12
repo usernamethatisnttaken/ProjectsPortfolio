@@ -10,5 +10,4 @@ Status: One single bug (*ahem* feature): Image size hardcapping seems to be brok
 To Run: dotnet run --project ./2023/Summer/DataAnalysis/experimental_data_compression/experimental_data_compression.csproj
 ![](dataCompression.gif)
 
-##
-please remove when done
+<h2></h2>
