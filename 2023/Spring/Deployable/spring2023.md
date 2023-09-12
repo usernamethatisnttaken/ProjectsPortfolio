@@ -39,3 +39,5 @@ Status: Functional with a few bugs (movement normalization, occlusion clipping)
     </p>
 </details>
 ![](renderer.gif)
+
+<h2></h2>
