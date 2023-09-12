@@ -18,7 +18,7 @@ public class CollatzConjectureModule<T> : Module<T> {
     /// Reads in the pipeline file.
     /// </summary>
     private void SetPipeline() {
-        string[] data = File.ReadAllText("resources/pipeline.csv").Split("\n");
+        string[] data = File.ReadAllText("2023/Summer/DataAnalysis/experimental_data_compression/resources/pipeline.csv").Split("\n");
 
         for(int i = 1; i < data.Length; i++) {
             pipeline.Add(long.Parse(data[i]));

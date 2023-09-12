@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mQjRjOhhDrCmkZIfkrnN68pa7CGcMTAmWNT1rwsORu869K+WkVBjo+eQ5QaRKHBvqkggwZReRCrSJxiKoqA7tg==",
+  "dgSpecHash": "qzzfA/om+HC7UXCzRMKTuxuuLBrMmSqw1PNAIIzxmhirud5fkU0+5mFt82VD4WFG0dzzu48e6/06K8xeVPcFSg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\hudjo\\OneDrive\\Documents\\GitHub\\ProjectsPortfolio\\2023\\Summer\\DataAnalysis\\experimental_data_compression\\experimental_data_compression.csproj",
+  "projectFilePath": "C:\\Users\\hudjo\\OneDrive\\Documents\\GitHub\\ProjectsPortfolio\\2023\\Summer\\DataAnalysis\\experimental_data_compression\\experimental_data_compression.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hudjo\\.nuget\\packages\\dynamicobj\\2.0.0\\dynamicobj.2.0.0.nupkg.sha512",
     "C:\\Users\\hudjo\\.nuget\\packages\\fsharp.core\\6.0.7\\fsharp.core.6.0.7.nupkg.sha512",
