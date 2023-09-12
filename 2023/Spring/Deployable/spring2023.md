@@ -30,7 +30,7 @@ Status: Functional with a few bugs (movement normalization, occlusion clipping)
             <li>LClick - Remove cube</li>
             <li>Shift/Ctrl - Layer up/down</li>
             <li>Escape - Exit GUI to simulation</li>
-        &emsp;<ul><ul>In simulation:</ul></ul>
+        &emsp;</ul></ul>In simulation:<ul><ul>
             <li>Up/Down - Rotate dynamic x</li>
             <li>Right/Left - Rotate dynamic z</li>
             <li>W/S - Move forward/backward</li>
