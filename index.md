@@ -25,6 +25,5 @@ Link to [my testing page][testing] (for me)
 [2023 spring]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/spring
 [2023 summer]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/summer
 [2023 fall]:  https://usernamethatisnttaken.github.io/ProjectsPortfolio/2023/fall
-
 [about me]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/about
 [testing]: https://usernamethatisnttaken.github.io/ProjectsPortfolio/testing
