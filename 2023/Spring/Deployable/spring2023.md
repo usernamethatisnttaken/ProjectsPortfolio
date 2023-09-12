@@ -23,6 +23,15 @@ Status: Functional with a few bugs (movement normalization, occlusion clipping)
     <summary>Controls</summary>
     
     To run: python 2023/Spring/Simulations/renderer/main.py  
-
+    In GUI:  
+    * RClick - Enter cube  
+    * LClick - Remove cube
+    * Shift/Ctrl - Layer up/down  
+    * Escape - Exit GUI to simulation  
+    In simulation:  
+    * Up/Down - Rotate dynamic x  
+    * Right/Left - Rotate dynamic z  
+    * W/S - Move forward/backward  
+    * A/D - Rotate perspective around the orgin?  
 
 </details>
