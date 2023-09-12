@@ -8,7 +8,7 @@ A data transformer I made as an experiment that takes a large amount of input da
 Status: One single bug (*ahem* feature): Image size hardcapping seems to be broken, so it is softcapped by processing time instead. Please do not try to do 1E7+ entries, as that image's size is >10MB, and I don't want your computer to hate you
 
 To Run: dotnet run --project ./2023/Summer/DataAnalysis/experimental_data_compression/experimental_data_compression.csproj
-![](dataCompression.png)
+![](dataCompression.gif)
 
 ##
 please remove when done
