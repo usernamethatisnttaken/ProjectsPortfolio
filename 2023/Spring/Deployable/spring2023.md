@@ -14,6 +14,7 @@ Status: Functional with one major bug (atan calculation is off -> why they sort 
      * M - Add a chunk of boids per tick
 
 </details>
+![](boids.gif)
 
 ### Renderer:
 A slightly better 3D renderer with a placement GUI (v2)  
