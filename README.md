@@ -1,7 +1,10 @@
 # Projects_Portfolio
 Just a collection of all of my finished personal projects (now with extra polishing!)  
+‎ 
 Status of the project enumerates whether it works or not along with my reflection (as of Fall 2023)  
+‎ 
 You're free to check out any of these projects and use ideas or methods that you like for yourself, but I'd appreciate if you wouldn't rip from this repo (i.e. Ctrl-A > Ctrl-C > Ctrl-V, you know how it is)  
+‎ 
 Thanks!
 
 
